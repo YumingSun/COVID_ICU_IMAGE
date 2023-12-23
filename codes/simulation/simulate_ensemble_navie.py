@@ -6,36 +6,21 @@ Created on Tue Aug  8 10:44:50 2023
 @author: yumsun
 """
 
-from sksurv.linear_model import CoxPHSurvivalAnalysis,CoxnetSurvivalAnalysis
+from sksurv.linear_model import CoxPHSurvivalAnalysis
 import numpy as np
 from sksurv.metrics import integrated_brier_score
-from sklearn.model_selection import GridSearchCV, KFold
-from sklearn.preprocessing import StandardScaler
 import pickle
-import pandas as pd
-import os
-import warnings
-from sklearn.exceptions import ConvergenceWarning
-from sklearn.model_selection import train_test_split
-import time
 import sys
+import os
 from sksurv.metrics import (
     concordance_index_censored,
     concordance_index_ipcw,
     cumulative_dynamic_auc,
     integrated_brier_score,
 )
-from sksurv.ensemble import RandomSurvivalForest,ExtraSurvivalTrees
-from sklearn.model_selection import RandomizedSearchCV
+from sksurv.ensemble import ExtraSurvivalTrees
 from sksurv.svm import FastKernelSurvivalSVM
-from scipy.stats import boxcox
-from sklearn.decomposition import PCA
-from sklearn.pipeline import Pipeline
-from sklearn.feature_selection import SelectKBest
 from sksurv.ensemble import GradientBoostingSurvivalAnalysis
-import eli5
-from eli5.sklearn import PermutationImportance
-from preprocess import clinic_preprocess,image_clinic_preprocess_model_fitting
 from scipy.stats import norm
 from impute_missing import impute_mean
 
@@ -188,7 +173,6 @@ if __name__ == '__main__':
     svm_param_path = ''
     gb_param_path = ''
     rsf_param_path = ''
-
     
     X = np.genfromtxt(os.path.join(dataPath,
                                    'X_{:03d}.csv'.format(numOfExp)),

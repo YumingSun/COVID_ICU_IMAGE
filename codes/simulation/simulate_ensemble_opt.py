@@ -10,7 +10,7 @@ import pandas as pd
 import numpy as np
 import os
 import pickle
-from preprocess import clinic_preprocess,image_clinic_preprocess_model_fitting
+# from preprocess import clinic_preprocess,image_clinic_preprocess_model_fitting
 from sklearn.model_selection import StratifiedKFold
 from scipy.stats import norm
 from sksurv.linear_model import CoxPHSurvivalAnalysis

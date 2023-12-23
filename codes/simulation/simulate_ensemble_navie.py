@@ -187,7 +187,6 @@ if __name__ == '__main__':
                             delimiter = ',')
         
         X = impute_mean(X,missing_id)
-        mean_ob = np.mean(missing_id,axis = 0)
     
     svm_param = find_best_linear_rbf_params(svm_param_path,numOfExp)
     gb_param = find_best_params(gb_param_path,numOfExp)

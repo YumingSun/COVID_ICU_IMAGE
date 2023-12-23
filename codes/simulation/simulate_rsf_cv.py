@@ -19,7 +19,7 @@ from sksurv.metrics import (
     cumulative_dynamic_auc,
     integrated_brier_score,
 )
-from sksurv.ensemble import RandomSurvivalForest,ExtraSurvivalTrees 
+from sksurv.ensemble import ExtraSurvivalTrees 
 from simulate_stratified_cv import stratified_cv,one_fold_cv
 from impute_missing import impute_mean
 

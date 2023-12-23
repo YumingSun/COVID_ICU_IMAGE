@@ -9,7 +9,6 @@ Created on Mon Aug  7 21:02:25 2023
 import numpy as np
 from sksurv.metrics import integrated_brier_score
 import pickle
-import pandas as pd
 import os
 import sys
 from sksurv.metrics import (
@@ -18,8 +17,7 @@ from sksurv.metrics import (
     cumulative_dynamic_auc,
     integrated_brier_score,
 )
-from sksurv.ensemble import RandomSurvivalForest, ExtraSurvivalTrees
-from preprocess import clinic_preprocess,image_clinic_preprocess_model_fitting
+from sksurv.ensemble import ExtraSurvivalTrees
 from impute_missing import impute_mean
 
 

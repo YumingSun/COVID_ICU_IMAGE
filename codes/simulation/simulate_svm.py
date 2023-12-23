@@ -17,7 +17,7 @@ from sksurv.metrics import (
     cumulative_dynamic_auc,
     integrated_brier_score,
 )
-from sksurv.svm import FastKernelSurvivalSVM,HingeLossSurvivalSVM,MinlipSurvivalAnalysis
+from sksurv.svm import FastKernelSurvivalSVM
 from impute_missing import impute_mean
 
 def find_best_linear_rbf_params(resLoc,numOfExp):

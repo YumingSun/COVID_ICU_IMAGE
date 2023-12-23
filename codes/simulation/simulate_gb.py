@@ -9,7 +9,6 @@ Created on Mon Aug  7 21:58:45 2023
 import numpy as np
 from sksurv.metrics import integrated_brier_score
 import pickle
-import pandas as pd
 import os
 import sys
 from sksurv.metrics import (
@@ -19,7 +18,6 @@ from sksurv.metrics import (
     integrated_brier_score,
 )
 from sksurv.ensemble import GradientBoostingSurvivalAnalysis
-from preprocess import clinic_preprocess,image_clinic_preprocess_model_fitting
 from impute_missing import impute_mean
 
 def find_best_params(resLoc,numOfExp):

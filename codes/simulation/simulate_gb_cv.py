@@ -117,14 +117,6 @@ if __name__ == '__main__':
                             delimiter = ',')
         
         X = impute_mean(X,missing_id)
-        mean_ob = np.mean(missing_id,axis = 0)
-        #idea_ob = np.repeat(0.9, X.shape[1])
-        idea_ob = np.repeat(0.8, X.shape[1])
-        diff = np.abs(np.mean(idea_ob - mean_ob))
-        if diff > 0.05:
-            np.savetxt(os.path.join(result_path,
-                            'ob_percentage_{:03d}.csv'.format(numOfExp)),
-               mean_ob,delimiter=',')
             
     x_train = X[y[:,2] == 1,:]
     y_train = y[y[:,2] == 1,:2]
